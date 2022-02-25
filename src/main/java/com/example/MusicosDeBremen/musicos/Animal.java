@@ -19,8 +19,16 @@ abstract public class Animal {
         return this.sound;
     }
 
-    public boolean gataIsSinging() {
+    public boolean IsSinging() {
         return this.sing;
+    }
+
+
+    public String Lyrics () {
+        if (IsSinging()) {
+            return "El animal está cantando " + getSound();
+        }
+        return "El animal " + getName() + " no está cantando";
     }
 
 }

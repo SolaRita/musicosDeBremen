@@ -8,10 +8,10 @@ public class Gata extends Animal {
 
 
     public String gataLyrics (){
-        if (gataIsSinging()) {
-            return "Esta cantando "+getSound();
+        if (IsSinging()) {
+            return "La gata está cantando "+getSound();
         }
-            return getName()+" no esta cantando";
+            return "La gata " +getName()+" no esta cantando";
 
     }
 //añadir otra classe Asno que tambien hable
