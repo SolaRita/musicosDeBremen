@@ -17,7 +17,7 @@ class AsnoTest {
     @Test
     void asnoLyricsQuiet(){
         Asno asno = new Asno ("Flor","silencio",false);
-        assertEquals("El asno Flor no está cantando", asno.asnoLyrics());
+        assertEquals("El asno Flor no está cantando", asno.Lyrics());
     }
 
     @Test

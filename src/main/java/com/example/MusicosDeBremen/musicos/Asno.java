@@ -4,7 +4,8 @@ public class Asno extends Animal {
 
     public Asno (String name, String sound, Boolean sing) { super (name,sound,sing);}
 
-    public String asnoLyrics () {
+ @Override
+    public String Lyrics () {
         if (IsSinging()) {
             return "El asno está cantando " + getSound();
         }

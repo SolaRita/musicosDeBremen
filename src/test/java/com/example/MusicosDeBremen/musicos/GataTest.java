@@ -32,13 +32,13 @@ class GataTest {
     @Test
     void catLyricsSinging() {
         Gata gata = new Gata("Flor", "oleole",true);
-        assertEquals("La gata está cantando oleole", gata.gataLyrics());
+        assertEquals("La gata está cantando oleole", gata.Lyrics());
     }
 
     @Test
     void catLyricsQuiet() {
         Gata gata = new Gata("Dog", "Ruf",false);
-        assertEquals("La gata Dog no esta cantando", gata.gataLyrics());
+        assertEquals("La gata Dog no esta cantando", gata.Lyrics());
     }
 
 }
