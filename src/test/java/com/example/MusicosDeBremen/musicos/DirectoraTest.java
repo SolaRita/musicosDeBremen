@@ -1,5 +1,6 @@
 package com.example.MusicosDeBremen.musicos;
-
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,16 +12,18 @@ class DirectoraTest {
     @Test
     void directoraOrderToSing () {
         //given
-        Directora directora = new Directora();
+
 
         ArrayList<Animal> coro = new ArrayList<Animal>();
-
         coro.add(new Asno("Burret","Rauttt"));
         coro.add(new Gata("Pepita","Remiau"));
 
+        Directora directora = new Directora(coro);
+
+
         //then
-        assertEquals(directora.allAnimalsSing(),"Rauttt");
-        assertEquals(directora.allAnimalsSing(),"Remiau");
+        assertThat(coro.get(1).getSound(), equalTo("Remiau"));
+
 
 
 

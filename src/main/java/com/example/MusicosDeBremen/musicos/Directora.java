@@ -3,10 +3,15 @@ package com.example.MusicosDeBremen.musicos;
 import java.util.ArrayList;
 
 public class Directora {
-
+    ArrayList<Animal> coro = new ArrayList<Animal>();
+    public Directora(ArrayList<Animal>coro) {
+        this.coro = coro;
+    }
 
     public void allAnimalsSing() {
-        ArrayList<Animal> coro = new ArrayList<Animal>();
+    for (Animal animal : coro) {
+        animal.startSinging();
 
+        }
     }
 }
