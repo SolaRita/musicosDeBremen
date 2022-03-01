@@ -7,13 +7,13 @@ import static org.hamcrest.Matchers.equalTo;
 class GataTest {
     @Test
     void gataHasName () {
-        Gata gata = new Gata("Michi", "Brrrr",false);
+        Gata gata = new Gata("Michi", "Brrrr");
         assertThat(gata.getName(),equalTo("Michi"));
     }
 
     @Test
     void gataHasSound(){
-        Gata gata = new Gata("Doraemon","MiauMiau",true);
+        Gata gata = new Gata("Doraemon","MiauMiau");
         assertThat(gata.getSound(), equalTo("MiauMiau"));
     }
 
@@ -25,19 +25,21 @@ class GataTest {
 
     @Test
     void catCanSinging() {
-        Gata gata = new Gata ("Lola", "Flups", true);
-        assertEquals(true, gata.IsSinging());
+        Gata gata = new Gata ("Lola", "Flups");
+        gata.startSinging();
+        assertEquals(true, gata.isSinging());
     }
 
     @Test
     void catLyricsSinging() {
-        Gata gata = new Gata("Flor", "oleole",true);
+        Gata gata = new Gata("Flor", "oleole");
+        gata.startSinging();
         assertEquals("La gata está cantando oleole", gata.Lyrics());
     }
 
     @Test
     void catLyricsQuiet() {
-        Gata gata = new Gata("Dog", "Ruf",false);
+        Gata gata = new Gata("Dog", "Ruf");
         assertEquals("La gata Dog no esta cantando", gata.Lyrics());
     }
 

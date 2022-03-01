@@ -2,13 +2,13 @@ package com.example.MusicosDeBremen.musicos;
 
 public class Gata extends Animal {
 
-    public Gata(String name, String sound, Boolean sing) {
-        super(name, sound, sing);
+    public Gata(String name, String sound) {
+        super(name, sound);
     }
 
 @Override
     public String Lyrics (){
-        if (IsSinging()) {
+        if (isSinging()) {
             return "La gata está cantando "+getSound();
         }
             return "La gata " +getName()+" no esta cantando";

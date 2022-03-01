@@ -1,16 +1,18 @@
 package com.example.MusicosDeBremen.musicos;
 
-abstract public class Animal {
+abstract public class Animal  {
+// atributos en private
     private String name;
     private String sound;
-    private Boolean sing;
+    private Boolean isSinging = false;
 
-    public Animal(String name, String sound, Boolean sing) {
+    //constructor en Public
+    public Animal(String name, String sound) {
         this.name = name;
         this.sound = sound;
-        this.sing = sing;
-    }
 
+    }
+    //getter y setters en Public
     public String getName() {
         return this.name;
     }
@@ -19,13 +21,25 @@ abstract public class Animal {
         return this.sound;
     }
 
-    public boolean IsSinging() {
-        return this.sing;
+
+    //funciones en protected
+
+    protected Boolean isSinging() {
+        return isSinging;
     }
 
 
-    public String Lyrics () {
-        if (IsSinging()) {
+    protected void startSinging() {
+        this.isSinging = true;
+    }
+
+
+    protected void stopSinging() {
+        this.isSinging = false;
+    }
+
+    protected String Lyrics () {
+        if (isSinging) {
             return "El animal está cantando " + getSound();
         }
         return "El animal " + getName() + " no está cantando";

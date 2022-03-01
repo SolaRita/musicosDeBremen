@@ -10,9 +10,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class DirectoraTest {
     @Test
     void directoraOrderToSing () {
-        Asno asno = new Asno("Pepe","tarari",true);
-        Directora directora = new Directora ();
-        assertEquals("tarari", directora.StartSing());
+        //given
+        Directora directora = new Directora();
+
+        ArrayList<Animal> coro = new ArrayList<Animal>();
+
+        coro.add(new Asno("Burret","Rauttt"));
+        coro.add(new Gata("Pepita","Remiau"));
+
+        //then
+        assertEquals(directora.allAnimalsSing(),"Rauttt");
+        assertEquals(directora.allAnimalsSing(),"Remiau");
+
+
+
+
+
 
     }
 }
