@@ -14,18 +14,19 @@ class DirectoraTest {
         //given
 
 
-        ArrayList<Animal> coro = new ArrayList<Animal>();
+        ArrayList<Animal> coro = new ArrayList<>();
         coro.add(new Asno("Burret","Rauttt"));
         coro.add(new Gata("Pepita","Remiau"));
-
+        //when
         Directora directora = new Directora(coro);
-
+        directora.allAnimalsSing();
 
         //then
         assertThat(coro.get(1).getSound(), equalTo("Remiau"));
-
-
         assertTrue(coro.get(0).isSinging());
+
+
+
 
 
 

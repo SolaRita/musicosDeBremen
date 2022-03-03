@@ -11,6 +11,7 @@ public class Directora {
     public void allAnimalsSing() {
     for (Animal animal : coro) {
         animal.startSinging();
+        animal.isSinging();
 
         }
     }
