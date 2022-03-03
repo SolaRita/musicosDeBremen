@@ -10,32 +10,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DirectoraTest {
     @Test
-    void directoraOrderToSing () {
+    void directoraOrderToSing() {
         //given
-
-
         ArrayList<Animal> coro = new ArrayList<>();
-        coro.add(new Asno("Burret","Rauttt"));
-        coro.add(new Gata("Pepita","Remiau"));
+        coro.add(new Asno("Burret", "Rauttt"));
+        coro.add(new Gata("Pepita", "Remiau"));
         //when
         Directora directora = new Directora(coro);
         directora.allAnimalsSing();
-
         //then
         assertThat(coro.get(1).getSound(), equalTo("Remiau"));
         assertTrue(coro.get(0).isSinging());
+    }
 
-
-
-
-
-
-
-
+    @Test
+    void whatLyricsAreAnimalsSinging() {
+        ArrayList<Animal> coro = new ArrayList<>();
+        coro.add(new Asno("Burret", "Rauttt"));
+        coro.add(new Gata("Pepita", "Remiau"));
+        //when
+        Directora directora = new Directora(coro);
+        directora.allAnimalsSing();
+        //then
+        assertThat(coro.get(0).Lyrics(), equalTo("El asno está cantando Rauttt"));
 
 
     }
+
 }
+
 
 
 
