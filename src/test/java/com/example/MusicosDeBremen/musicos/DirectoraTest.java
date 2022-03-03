@@ -25,6 +25,9 @@ class DirectoraTest {
         assertThat(coro.get(1).getSound(), equalTo("Remiau"));
 
 
+        assertTrue(coro.get(0).isSinging());
+
+
 
 
 

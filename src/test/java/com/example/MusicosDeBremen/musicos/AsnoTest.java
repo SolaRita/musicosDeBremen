@@ -32,4 +32,21 @@ class AsnoTest {
         Asno asno = new Asno ("Flor","sfiuuu");
         assertThat(asno.getSound(), equalTo("sfiuuu"));
     }
+
+    @Test
+    void asnoIsSinging(){
+        //given
+        Asno asno = new Asno ("Ramona", "yuha");
+        //when
+        asno.startSinging();
+        //then
+        assertTrue(asno.isSinging());
+    }
+
+    @Test
+    void asnIsNotSigning(){
+        Asno asno = new Asno ("Claudia", "beee!");
+        asno.stopSinging();
+        assertFalse(asno.isSinging());
+    }
 }
