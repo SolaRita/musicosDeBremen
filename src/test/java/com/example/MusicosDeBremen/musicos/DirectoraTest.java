@@ -33,7 +33,18 @@ class DirectoraTest {
         directora.allAnimalsSing();
         //then
         assertThat(coro.get(0).Lyrics(), equalTo("El asno está cantando Rauttt"));
+    }
 
+    @Test
+    void directoraMakeAnimalsStopSinging() {
+        ArrayList<Animal> coro = new ArrayList<>();
+        coro.add(new Asno("Burret", "Rauttt"));
+        coro.add(new Gata("Pepita", "Remiau"));
+        //when
+        Directora directora = new Directora(coro);
+        directora.allAnimalsSing();
+        directora.allAnimalsStopSinging();
+        assertFalse(coro.get(0).isSinging());
 
     }
 

@@ -12,7 +12,13 @@ public class Directora {
     for (Animal animal : coro) {
         animal.startSinging();
         animal.isSinging();
+        }
+    }
 
+    public void allAnimalsStopSinging() {
+        for (Animal animal : coro) {
+            animal.stopSinging();
+            animal.isSinging();
         }
     }
 }
