@@ -48,6 +48,19 @@ class DirectoraTest {
 
     }
 
+    @Test
+    void whenChoreIsNotSingingDoTheySaySomething() {
+        ArrayList<Animal> coro = new ArrayList<>();
+        coro.add(new Asno("Burret", "Rauttt"));
+        coro.add(new Gata("Pepita", "Remiau"));
+        //when
+        Directora directora = new Directora(coro);
+        directora.allAnimalsStopSinging();
+        assertThat(coro.get(0).Lyrics(), equalTo("El asno Burret no está cantando"));
+
+
+    }
+
 }
 
 
