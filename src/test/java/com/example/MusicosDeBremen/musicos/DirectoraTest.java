@@ -12,12 +12,12 @@ class DirectoraTest {
     @Test
     void directoraOrderToSing() {
         //given
-        ArrayList<Animal> coro = new ArrayList<>();
+        ArrayList<Singers> coro = new ArrayList<>();
         coro.add(new Asno("Burret", "Rauttt"));
         coro.add(new Gata("Pepita", "Remiau"));
         //when
         Directora directora = new Directora(coro);
-        directora.allAnimalsSing();
+        directora.allSing();
         //then
         assertThat(coro.get(1).getSound(), equalTo("Remiau"));
         assertTrue(coro.get(0).isSinging());
@@ -25,38 +25,57 @@ class DirectoraTest {
 
     @Test
     void whatLyricsAreAnimalsSinging() {
-        ArrayList<Animal> coro = new ArrayList<>();
+        ArrayList<Singers> coro = new ArrayList<>();
         coro.add(new Asno("Burret", "Rauttt"));
         coro.add(new Gata("Pepita", "Remiau"));
         //when
         Directora directora = new Directora(coro);
-        directora.allAnimalsSing();
+        directora.allSing();
         //then
         assertThat(coro.get(0).Lyrics(), equalTo("El asno está cantando Rauttt"));
     }
 
     @Test
     void directoraMakeAnimalsStopSinging() {
-        ArrayList<Animal> coro = new ArrayList<>();
+        ArrayList<Singers> coro = new ArrayList<>();
         coro.add(new Asno("Burret", "Rauttt"));
         coro.add(new Gata("Pepita", "Remiau"));
         //when
         Directora directora = new Directora(coro);
-        directora.allAnimalsSing();
-        directora.allAnimalsStopSinging();
+        directora.allSing();
+        directora.allStopSinging();
         assertFalse(coro.get(0).isSinging());
 
     }
 
     @Test
     void whenChoreIsNotSingingDoTheySaySomething() {
-        ArrayList<Animal> coro = new ArrayList<>();
+        ArrayList<Singers> coro = new ArrayList<>();
         coro.add(new Asno("Burret", "Rauttt"));
         coro.add(new Gata("Pepita", "Remiau"));
         //when
         Directora directora = new Directora(coro);
-        directora.allAnimalsStopSinging();
+        directora.allStopSinging();
         assertThat(coro.get(0).Lyrics(), equalTo("El asno Burret no está cantando"));
+
+
+    }
+
+    @Test
+    void AddAnimalsAndComicCharactesToChore() {
+        ArrayList<Singers> coro = new ArrayList<>();
+        coro.add(new Asno("Tipet", "Pupu"));
+        coro.add(new ComicCharacter("Mafalda" ,"ByeBye"));
+        coro.add(new ComicCharacter("Spiderman" ,"Blabla"));
+        coro.add(new Gata("Pepita", "Remiau"));
+        Directora directora = new Directora(coro);
+        assertThat(coro.size(), equalTo(4));
+
+
+
+
+
+
 
 
     }

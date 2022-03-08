@@ -3,22 +3,22 @@ package com.example.MusicosDeBremen.musicos;
 import java.util.ArrayList;
 
 public class Directora {
-    ArrayList<Animal> coro = new ArrayList();
-    public Directora(ArrayList<Animal>coro) {
+    ArrayList<Singers> coro = new ArrayList();
+    public Directora(ArrayList<Singers>coro) {
         this.coro = coro;
     }
 
-    public void allAnimalsSing() {
-    for (Animal animal : coro) {
-        animal.startSinging();
-        animal.isSinging();
+    public void allSing() {
+    for (Singers singer : coro) {
+        singer.startSinging();
+        singer.isSinging();
         }
     }
 
-    public void allAnimalsStopSinging() {
-        for (Animal animal : coro) {
-            animal.stopSinging();
-            animal.isSinging();
+    public void allStopSinging() {
+        for (Singers singer : coro) {
+            singer.stopSinging();
+            singer.isSinging();
         }
     }
 }
